@@ -105,21 +105,22 @@ class Graph:
                         k_list=[]
                         for k in range(n):
                             if A[j][k]=="__" and not(k == i) and self.isVertexConnected(i,k):
-                                k_list.append(k)
-                        print(f"A[{j}][{i}]: {k_list}")
+                                k_list = k_list+[k]
+                        print(f"A[{j}][{i}] k_list: {k_list}")
                         if not len(k_list):
                             A[j][i]=0
                         else:
                             for k in k_list:
                                 XOR = j^(2**i)
+                                print(f"A[{j}][{i}] XOR : {XOR}")
                                 if A[XOR][k]:
                                     A[j][i]=1
+                                    print(f"A[{j}][{i}] = 1")
                                     P[j][i]=k
-                                    break
+                                    print(f"P[{j}][{i}] = {k}")
                                 else: 
                                     A[j][i]=0
                                     P[j][i]="phi"
-                            
         
         print(A)
         print(P)          
