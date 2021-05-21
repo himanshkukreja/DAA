@@ -1,3 +1,12 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu May 19 13:50:43 2021
+
+Identify the Hamiltonian Cycle using Dyanimic Programming
+
+@author: Himanshu kukreja
+"""
+
 from collections import defaultdict
 import copy
 class Graph:
@@ -87,7 +96,7 @@ class Graph:
             for j in range(n):
                 if rev_Bitmask[j]=="0":
                     A[i][j] = 0
-                    P[i][j] = 0
+                    P[i][j] = -1
         
         for i in range(n):
             A[2**i][i] = 1
@@ -137,6 +146,7 @@ g3.addEdge(1, 2)
 g3.addEdge(2, 3)
 g3.addEdge(3, 1)
 g3.addEdge(0, 1)
+g3.addEdge(3, 0)
 g3.printGraph()
 g3.HamDyanimicProgramming()
 

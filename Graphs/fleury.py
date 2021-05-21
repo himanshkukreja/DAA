@@ -1,3 +1,11 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu May 17 12:14:05 2021
+
+Identify the Euler Path/Cycle using Fleury Algoithm
+
+@author: Himanshu kukreja
+"""
 from collections import defaultdict
 
 

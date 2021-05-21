@@ -1,3 +1,11 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu May 17 12:14:05 2021
+
+Identify the Hamiltonian Cycle using Brute_force
+
+@author: Himanshu kukreja
+"""
 from collections import defaultdict
 import time
 
